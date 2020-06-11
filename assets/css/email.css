@@ -1,0 +1,333 @@
+
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    /* font-family: gilam, serif; */
+}
+
+.emails-main{
+    width: 100%;
+    min-height: calc(100vh - 5rem)
+}
+
+.email-search-and-table{
+    width: 70%;
+}
+
+/********************************* serch-input ****************************/
+
+.email-search-and-table .search-section{
+    margin: 10px auto;
+    width: 100%;
+    margin-top: 40px;
+    max-width: 50rem;
+}
+
+.filter-input{
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+    background-color: white;
+    padding: 0.5rem;
+    font-size: 30px;
+}
+
+/******************************* selection ******************************/
+.selection-container{
+    margin: 20px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #e1dfdf;
+    padding: 10px;
+}
+
+.selection-container button{
+    background: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: gray;
+    outline: none;
+}
+
+
+/******************************* table-emails ***************************/
+
+.table-container{
+    width: 100%;
+    border-left: 2px solid #d1d1d1;
+}
+
+table{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+.emails-container{
+    display: grid;
+    border-collapse: collapse;
+    margin-left: 0;
+    grid-template-columns: minmax(min-content, 0.2fr) minmax(min-content, 0.6fr) minmax(min-content, 0.6fr) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 0.2fr);
+}
+
+tr{
+    padding: 10px;
+    border-style: solid;
+    display: contents;
+    width: 100%;
+}
+
+tr:nth-child(even) td {
+    background: #ececec;
+}
+
+td{
+    padding: 10px;
+}
+
+.link-to-email-details{
+    cursor: pointer;
+}
+
+/********************************** email-details *******************************/
+
+.email-details-container{
+    width: 100%;
+}
+
+
+.top-buttons-container{
+    width: 100%;
+    height: 8%;
+}
+
+.top-buttons{
+    position: absolute;
+    right: 0;
+    margin: 10px;
+}
+
+.top-buttons button{
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 2rem;
+    margin: 0 10px;
+    color: gray;
+    outline: none;
+    /* padding: 10px; */
+}
+
+/*************** email-nav ****************/
+.email-nav-container {
+    width: 30%;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    position: relative;
+    background-color: #ececec;
+    cursor: pointer;
+}
+
+.email-nav-links{
+    padding: 0;
+    margin: 0;
+}
+
+.email-nav-link{
+    margin: 10px;
+    cursor: pointer;
+    width: 90%;
+    padding: 10px;
+    font-size: 2rem;
+    color: #4e4a4a;
+    transition: ease-in-out 0.15s;
+}
+
+.email-nav-link:hover{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.email-nav-link-active{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.btn-add-email{
+    background: #4e4a4a;
+    border-radius: 10px;
+    /* width: 20rem; */
+    height: 5rem;
+    cursor: pointer;
+    border: 0;
+    font-size: 1.5rem;
+    margin: 10px;
+    margin-right: 25px;
+    color: white;
+    outline: none;
+    /* text-align: left; */
+    font-family: gilam, serif;
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+/*********************** modal-compose ****************/
+
+.modal-wrapper {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -7px;
+    bottom: 6px;
+    /* z-index: 10; */
+    animation: fadein 0.25s ease-in-out;
+}
+
+.modal-content {
+    background: white;
+    width: 600px;
+    max-width: 95%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    position: relative;
+    animation: scalein 0.3s ease-in-out;
+}
+
+.new-mail-form{
+    font-size: 1.2rem;
+}
+
+.new-mail-form-title {
+    background: #4e4a4a;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.new-mail-form > span > input {
+    margin-left: 5px;
+    padding: 15px;
+    height: 100%;
+    flex-grow: 1;
+    outline: none;
+    border: 0;
+    
+}
+
+.new-mail-form > span {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+
+.new-mail-form textarea {
+    resize: none;
+    border: 0;
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.new-mail-form-buttons {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 100%;
+}
+
+.new-mail-form-buttons button{
+    background: #4e4a4a;
+    /* border-radius: 50%; */
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: 0;
+    font-size: 1.5rem;
+    margin: 5px 10px;
+    color: white;
+    outline: none;
+}
+
+/*************************** modal-msg *******************************/
+
+.msg-email-container{
+    bottom: 35px;
+    position: fixed;
+    z-index: 999;
+    left: 20px;
+    border-style: solid;
+    padding: 20px 60px;
+    border-radius: 10px;
+    font-size: 2rem;
+}
+
+
+/********************** email-details-page *******************/
+
+.email-body{
+    height: 100%;
+}
+
+.email-body>*{
+    padding: 10px 20px;
+    border-bottom: 2px solid rgba(192, 192, 192, 0.5);
+}
+
+.body-details{
+    text-align: center;
+}
+.img-detail{
+    padding: 10px 20px;
+    border-bottom: 2px solid rgba(192, 192, 192, 0.5);
+}
+.img-detail img{
+    margin: 20px auto;
+    /* width: 400px; */
+    display: block;
+    height: 100%;
+    
+}
+
+.body-details{
+    padding: 30px 200px;
+    font-size: 1.2rem;
+}
+
+.btn-select{
+    background: white;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: 0;
+    font-size: 2rem;
+    margin: 0 10px;
+    color: gray;
+    outline: none;
+    text-align: center;
+    padding:0;
+}
+
+.read{
+    font-weight: normal;
+}
+
+.unread{
+    font-weight: bold;
+}
