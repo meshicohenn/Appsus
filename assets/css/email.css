@@ -15,7 +15,7 @@ body {
 }
 
 .email-search-and-table{
-    width: 70%;
+    width: 80%;
 }
 
 /********************************* serch-input ****************************/
@@ -65,6 +65,7 @@ body {
 .table-container{
     width: 100%;
     border-left: 2px solid #d1d1d1;
+    font-size: 0.9rem;
 }
 
 table{
@@ -133,7 +134,7 @@ td{
 
 /*************** email-nav ****************/
 .email-nav-container {
-    width: 30%;
+    width: 20%;
     top: 0;
     left: 0;
     transition: 0.5s;
@@ -152,7 +153,7 @@ td{
     cursor: pointer;
     width: 90%;
     padding: 10px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #4e4a4a;
     transition: ease-in-out 0.15s;
 }
@@ -171,17 +172,16 @@ td{
     background: #4e4a4a;
     border-radius: 10px;
     /* width: 20rem; */
-    height: 5rem;
+    height: 4rem;
     cursor: pointer;
     border: 0;
-    font-size: 1.5rem;
     margin: 10px;
     margin-right: 25px;
     color: white;
     outline: none;
     /* text-align: left; */
     font-family: gilam, serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 200;
 }
 
